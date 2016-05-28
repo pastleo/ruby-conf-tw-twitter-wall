@@ -1,0 +1,6 @@
+version: '2'
+services:
+  main:
+    build: .
+    ports: ['127.0.0.1:8001:8080']
+    restart: always

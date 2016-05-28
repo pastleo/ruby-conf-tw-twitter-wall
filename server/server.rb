@@ -15,10 +15,10 @@ if Settings.babel_transpiler.to_hash[:enabled]
   Dir[ src_folder + "*.jsx" ].each do |f|
     result_file = tar_folder + f.split("/")[-1].split(".")[0] + ".js"
     puts ">> '#{f}' > '#{result_file}'"
-    File.write(
-      result_file,
-      Babel::Transpiler.transform(File.read(f))["code"]
-    )
+    # File.write(
+    #   result_file,
+    #   Babel::Transpiler.transform(File.read(f))["code"]
+    # )
   end
   puts "Compilation OK!"
 end
